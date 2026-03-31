@@ -77,7 +77,7 @@ const Hero = () => {
             {/* Profile Image Container */}
             <div className="absolute inset-0 rounded-full border-2 border-gradient-primary bg-glass flex items-center justify-center overflow-hidden">
               <img
-                src={personal.profileImage}
+                src="/my-pic.jpg"
                 alt={personal.name}
                 className="w-full h-full object-cover rounded-full"
               />
