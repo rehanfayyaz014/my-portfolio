@@ -17,10 +17,10 @@ const Projects = () => {
   };
 
   const projectVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
-      y: 0,
+      scale: 1,
       transition: { duration: 0.6 },
     },
   };
@@ -30,7 +30,7 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto">
         {/* Background Animation */}
         <motion.div
-          className="absolute inset-0 pointer-events-none"
+          className="absolute inset-0 pointer-events-none hidden sm:block"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 0.1 }}
           transition={{ duration: 1 }}
@@ -165,7 +165,7 @@ const Projects = () => {
             href={portfolioData.socials.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="glass px-8 py-3 rounded-lg font-semibold inline-flex items-center gap-2 hover:glow-teal transition-all"
+            className="glass bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 md:px-8 md:py-3 rounded-lg font-semibold text-sm md:text-base inline-flex items-center gap-2 hover:glow-teal transition-all"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

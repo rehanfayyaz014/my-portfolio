@@ -18,18 +18,18 @@ const Hero = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: 'easeOut' },
+      scale: 1,
+      transition: { duration: 0.6, ease: 'easeOut' },
     },
   };
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative px-4 sm:px-8 pt-20">
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden hidden sm:block">
         <motion.div
           className="absolute w-96 h-96 bg-gradient-primary rounded-full blur-3xl opacity-10"
           animate={{ x: [-50, 50], y: [-50, 50] }}
@@ -47,7 +47,8 @@ const Hero = () => {
       <motion.div
         variants={containerVariants}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
         className="relative z-10 max-w-4xl w-full text-center"
       >
         {/* Profile Picture */}
@@ -56,7 +57,7 @@ const Hero = () => {
           className="mb-8 flex justify-center"
         >
           <motion.div
-            className="relative w-40 h-40 sm:w-48 sm:h-48"
+            className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 shadow-[0_0_24px_rgba(32,201,151,0.55)]"
             whileHover={{ scale: 1.05 }}
             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
           >
@@ -95,12 +96,12 @@ const Hero = () => {
         {/* Action Buttons */}
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+          className="flex flex-col md:flex-row gap-4 justify-center mb-12 w-full max-w-xs sm:max-w-md md:max-w-none mx-auto md:mx-0"
         >
           <motion.a
             href="/Muhammad_Rehan_Resume.pdf"
             download="Muhammad_Rehan_Resume.pdf"
-            className="glass px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-opacity-20 transition-all hover:glow-teal"
+            className="glass bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 md:px-8 md:py-3 rounded-lg font-semibold text-sm md:text-base flex items-center justify-center gap-2 hover:bg-opacity-20 transition-all hover:glow-teal"
             whileHover={{ y: -5, scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -112,7 +113,7 @@ const Hero = () => {
             href={portfolioData.socials.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="glass px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-opacity-20 transition-all"
+            className="glass bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 md:px-8 md:py-3 rounded-lg font-semibold text-sm md:text-base flex items-center justify-center gap-2 hover:bg-opacity-20 transition-all"
             whileHover={{ y: -5, scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -124,7 +125,7 @@ const Hero = () => {
             href={portfolioData.socials.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="glass px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-opacity-20 transition-all"
+            className="glass bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 md:px-8 md:py-3 rounded-lg font-semibold text-sm md:text-base flex items-center justify-center gap-2 hover:bg-opacity-20 transition-all"
             whileHover={{ y: -5, scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -136,11 +137,11 @@ const Hero = () => {
         {/* Contact Info */}
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-4 justify-center text-sm mb-8"
+          className="flex flex-col sm:flex-row gap-4 justify-center text-sm mb-8 w-full max-w-xs sm:max-w-md md:max-w-none mx-auto md:mx-0"
         >
           <motion.a
             href={`mailto:${personal.email}`}
-            className="glass px-6 py-2 rounded-lg hover:bg-opacity-20 transition-all flex items-center justify-center gap-2"
+            className="glass bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 md:px-6 md:py-2 rounded-lg hover:bg-opacity-20 transition-all flex items-center justify-center gap-2 text-sm md:text-base"
             whileHover={{ y: -5, scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -151,7 +152,7 @@ const Hero = () => {
             href="https://wa.me/923360504355"
             target="_blank"
             rel="noopener noreferrer"
-            className="glass px-6 py-2 rounded-lg hover:bg-opacity-20 transition-all flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-green-500/50"
+            className="glass bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 md:px-6 md:py-2 rounded-lg hover:bg-opacity-20 transition-all flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-green-500/50 text-sm md:text-base"
             whileHover={{ y: -5, scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
@@ -159,7 +160,7 @@ const Hero = () => {
             {personal.phone}
           </motion.a>
           <motion.div
-            className="glass px-6 py-2 rounded-lg flex items-center justify-center gap-2 cursor-default"
+            className="glass bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 md:px-6 md:py-2 rounded-lg flex items-center justify-center gap-2 cursor-default text-sm md:text-base"
             whileHover={{ y: -5 }}
           >
             <span className="text-teal-400">📍</span>

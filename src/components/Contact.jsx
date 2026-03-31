@@ -58,10 +58,10 @@ const Contact = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, scale: 0.9 },
     visible: {
       opacity: 1,
-      y: 0,
+      scale: 1,
       transition: { duration: 0.6 },
     },
   };
@@ -145,8 +145,9 @@ const Contact = () => {
                     href={social.href}
                     target={social.label !== 'Email' && social.label !== 'Phone' ? '_blank' : '_self'}
                     rel="noopener noreferrer"
-                    className="glass p-4 rounded-lg flex items-center gap-4 hover:glow-teal transition-all group"
+                    className="glass bg-white/10 backdrop-blur-md border border-white/20 p-3 md:p-4 rounded-lg flex items-center gap-4 hover:glow-teal transition-all group"
                     whileHover={{ x: 5 }}
+                    whileTap={{ scale: 0.97 }}
                   >
                     <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Icon className="text-white text-lg" />
@@ -189,7 +190,7 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Your name"
                   required
-                  className="w-full glass px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-teal-400 transition-all"
+                  className="w-full glass bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 md:py-3 rounded-lg text-sm md:text-base text-white placeholder-gray-400 focus:outline-none focus:border-teal-400 transition-all"
                   whileFocus={{ scale: 1.02 }}
                 />
               </div>
@@ -204,7 +205,7 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="your@email.com"
                   required
-                  className="w-full glass px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-teal-400 transition-all"
+                  className="w-full glass bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 md:py-3 rounded-lg text-sm md:text-base text-white placeholder-gray-400 focus:outline-none focus:border-teal-400 transition-all"
                   whileFocus={{ scale: 1.02 }}
                 />
               </div>
@@ -219,7 +220,7 @@ const Contact = () => {
                   placeholder="Your message here..."
                   rows="5"
                   required
-                  className="w-full glass px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-400 focus:outline-none focus:border-teal-400 transition-all resize-none"
+                  className="w-full glass bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 md:py-3 rounded-lg text-sm md:text-base text-white placeholder-gray-400 focus:outline-none focus:border-teal-400 transition-all resize-none"
                   whileFocus={{ scale: 1.02 }}
                 />
               </div>
@@ -238,7 +239,7 @@ const Contact = () => {
               {/* Submit Button */}
               <motion.button
                 type="submit"
-                className="w-full glass px-6 py-3 rounded-lg font-semibold bg-gradient-to-r from-teal-500/20 to-indigo-500/20 hover:glow-teal transition-all"
+                className="w-full glass bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold text-sm md:text-base bg-gradient-to-r from-teal-500/20 to-indigo-500/20 hover:glow-teal transition-all"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
