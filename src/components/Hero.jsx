@@ -26,14 +26,6 @@ const Hero = () => {
     },
   };
 
-  const handleDownloadResume = () => {
-    const resumeUrl = '/Muhammad_Rehan_Resume.pdf';
-    const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.download = 'Muhammad_Rehan_Resume.pdf';
-    link.click();
-  };
-
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative px-4 sm:px-8 pt-20">
       {/* Animated Background Elements */}
@@ -105,15 +97,16 @@ const Hero = () => {
           variants={itemVariants}
           className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
         >
-          <motion.button
-            onClick={handleDownloadResume}
+          <motion.a
+            href="/Muhammad_Rehan_Resume.pdf"
+            download="Muhammad_Rehan_Resume.pdf"
             className="glass px-8 py-3 rounded-lg font-semibold flex items-center justify-center gap-2 hover:bg-opacity-20 transition-all hover:glow-teal"
             whileHover={{ y: -5, scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <FaDownload className="text-teal-400" />
             Download Resume
-          </motion.button>
+          </motion.a>
 
           <motion.a
             href={portfolioData.socials.linkedin}
