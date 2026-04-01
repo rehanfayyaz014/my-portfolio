@@ -162,16 +162,16 @@ export const portfolioData = {
       details: 'CGPA: 3.66 / 4.0 | 5 Semesters Completed | Expected Graduation: 2027',
     },
     {
-      degree: 'ICS',
-      institution: 'Punjab College',
+      degree: 'Intermediate in Computer Science (ICS)',
+      institution: 'Punjab Group of Colleges (PGC)',
       duration: '2021 - 2023',
-      details: '',
+      details: 'Major Subjects: Mathematics, Physics, Computer Science',
     },
     {
-      degree: 'Matric',
+      degree: 'Matriculation (Science - Computer Science)',
       institution: 'Al-Noor Public Secondary School Mandi Bahauddin',
-      duration: '2021',
-      details: '',
+      duration: '2019 - 2021',
+      details: 'Major Subjects: Mathematics, Computer Science, Physics, Chemistry',
     },
   ],
 
