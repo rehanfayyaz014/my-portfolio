@@ -156,10 +156,10 @@ export const portfolioData = {
 
   education: [
     {
-      degree: 'Bachelor of Computer Science',
+      degree: 'Bachelor of Computer Science (5 Semesters Completed)',
       institution: 'University Of Central Punjab',
       duration: '2023 - 2027',
-      details: 'CGPA: 3.75 / 4.0',
+      details: 'CGPA: 3.66 / 4.0',
     },
     {
       degree: 'ICS',
