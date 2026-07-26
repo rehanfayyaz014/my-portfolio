@@ -53,6 +53,27 @@ export const portfolioData = {
 
   projects: [
     {
+  id: 8,
+  title: 'FitForge',
+  subtitle: 'AI-Powered Fitness Web Application',
+  technologies: [
+    'Python',
+    'Flask',
+    'Machine Learning',
+    'JavaScript',
+    'HTML',
+    'CSS',
+    'Supabase'
+  ],
+  description: [
+    'Developed an AI-powered fitness platform that predicts users’ body types using a Machine Learning model.',
+    'Built personalized workout plans, diet recommendations, calorie & protein tracking, and AI-powered food recognition.',
+    'Implemented multilingual support, interactive analytics dashboard, and deployed the application for real-world use.'
+  ],
+  link: 'https://body-type-classifier.vercel.app/', // 👈 apna actual live link paste krna
+  icon: '💪',
+},
+    {
       id: 1,
       title: 'Email Spam Classifier',
       subtitle: 'End-to-End ML Project',
