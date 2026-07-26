@@ -55,7 +55,7 @@ export const portfolioData = {
     {
   id: 8,
   title: 'FitForge',
-  subtitle: 'AI-Powered Fitness Web Application',
+  subtitle: 'AI-Powered Fitness & Nutrition Platform',
   technologies: [
     'Python',
     'Flask',
@@ -65,11 +65,11 @@ export const portfolioData = {
     'CSS',
     'Supabase'
   ],
-  description: [
-    'Developed an AI-powered fitness platform that predicts users’ body types using a Machine Learning model.',
-    'Built personalized workout plans, diet recommendations, calorie & protein tracking, and AI-powered food recognition.',
-    'Implemented multilingual support, interactive analytics dashboard, and deployed the application for real-world use.'
-  ],
+ description: [
+  'Developed an AI-powered fitness platform that predicts users’ body types using Machine Learning and generates personalized fitness insights.',
+  'Implemented personalized diet and exercise plans, BMI calculation, calorie & protein tracking, smart recommendations, and multilingual support.',
+  'Designed a modern responsive Glassmorphism UI, integrated Supabase for data persistence, and deployed the application for real-world use.'
+],
   link: 'https://body-type-classifier.vercel.app/', // 👈 apna actual live link paste krna
   icon: '💪',
 },
